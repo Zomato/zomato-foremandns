@@ -14,8 +14,7 @@ class foremandns::install {
       file { $::foremandns::install_dir:
         ensure  => directory,
         group   => 'root',
-        owner   => 'root',
-        require => User['root']
+        owner   => 'root'
       }
 
       archive { '/tmp/foremandns.tar.gz':
