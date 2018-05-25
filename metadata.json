@@ -1,6 +1,6 @@
 {
   "name": "vinothzomato-foremandns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "vinothzomato",
   "summary": "Foremandns server puppet module",
   "license": "Apache-2.0",
