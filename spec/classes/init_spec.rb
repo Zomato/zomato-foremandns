@@ -55,7 +55,7 @@ describe 'foremandns' do
       it { should contain_file(service_config).with_ensure('present') }
     end
 
-    describe 'run grafana as service' do
+    describe 'run foremandns as service' do
       it { should contain_service('foremandns').with_ensure('running').with_provider('base') }
       it { should contain_service('foremandns').with_hasrestart(false).with_hasstatus(false) }
     end

@@ -30,13 +30,13 @@
 #  }
 #
 class foremandns (
-  $archive_source      = $::grafana::params::archive_source,
-  $cfg_location        = $::grafana::params::cfg_location,
-  $cfg                 = $::grafana::params::cfg,
-  $install_dir         = $::grafana::params::install_dir,
-  $install_method      = $::grafana::params::install_method,
-  $service_name        = $::grafana::params::service_name,
-  $version             = $::grafana::params::version
+  $archive_source      = $::foremandns::params::archive_source,
+  $cfg_location        = $::foremandns::params::cfg_location,
+  $cfg                 = $::foremandns::params::cfg,
+  $install_dir         = $::foremandns::params::install_dir,
+  $install_method      = $::foremandns::params::install_method,
+  $service_name        = $::foremandns::params::service_name,
+  $version             = $::foremandns::params::version
 ) inherits foremandns::params {
 
   # validate parameters here
