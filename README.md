@@ -49,15 +49,77 @@ here.
 
 ### Beginning with foremandns
 
-The very basic steps needed for a user to get the module up and running. This
-can include setup steps, if necessary, or it can be an example of the most
-basic use of the module.
+To install foremandns with the default parameters:
+
+```puppet
+    class { 'foremandns': }
+```
+
+This assumes that you want to install Grafana using the 'package' method. To establish customized parameters:
+
+```puppet
+    class { 'foremandns':
+      install_method  => 'archive',
+    }
+```
 
 ## Usage
 
-This section is where you describe how to customize, configure, and do the
-fancy stuff with your module here. It's especially helpful if you include usage
-examples and code samples for doing things with your module.
+### Classes and Defined Types
+
+#### Class: `foremandns`
+
+The ForemanDNS module's primary class, `foremandns`, guides the basic setup of ForemanDNS on your system.
+
+```puppet
+    class { 'foremandns': }
+```
+** Parameters within `foremandns`:**
+
+##### `archive_source`
+
+The download location of a tarball to use with the 'archive' install method. Defaults to the URL of the latest version of ForemanDNS available at the time of module release.
+
+##### `cfg_location`
+
+Configures the location to which the ForemanDNS configuration is written. The default location is '/usr/foremandns/foremandns/foremandns.yaml'.
+
+##### `cfg`
+
+Manages the ForemanDNS configuration file.
+
+This parameter only accepts a hash as its value. Keys with hashes as values will generate sections, any other values are just plain values. The example below will result in...
+
+```puppet
+    class { 'foremandns':
+      cfg => {
+        url => 'https://foreman.exmaple.com',
+        username => 'username',
+        pasword => 'password',
+        zone => '.foremansystem.com.',
+        cache-type => 'memory',
+        ttl => 1800
+        redis   => {
+          server     => 'localhost:6379',
+        },
+      },
+    }
+```
+##### `install_dir`
+
+The installation directory to be used with the 'archive' install method. Defaults to '/usr/share/foremandns'.
+
+##### `install_method`
+
+Controls which method to use for installing ForemanDNS. Valid option is 'archive'. The default is 'archive'. 
+
+##### `service_name`
+
+The name of the service managed with the 'archive' install method. Defaults to 'foremandns'.
+
+##### `version`
+
+The version of Grafana to install and manage. Defaults to the latest version of ForemanDNS available at the time of module release.
 
 ## Reference
 
