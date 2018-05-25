@@ -5,9 +5,9 @@
 #
 class foremandns::params {
   $archive_source      = undef
-  $cfg_location        = '/etc/foremandns/foremandns.yaml'
+  $cfg_location        = '/usr/share/foremandns/foremandns.yaml'
   $cfg                 = {}
-  $install_dir         = '/usr/share/foremandns'
+  $install_dir         = '/usr/share/foremandns/'
   $install_method      = 'archive'
   $service_name        = 'foremandns'
   $version             = 'v1.0.0'

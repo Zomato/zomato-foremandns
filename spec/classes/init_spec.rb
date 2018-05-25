@@ -37,7 +37,7 @@ describe 'foremandns' do
     }}
 
     install_dir    = '/usr/share/foremandns'
-    service_config = '/etc/foremandns/foremandns/foremandns.yaml'
+    service_config = '/usr/share/foremandns/foremandns/foremandns.yaml'
     archive_source = 'https://s3.ap-south-1.amazonaws.com/zomato-foremandns/foremandns-linux-amd64-v1.0.0.tgz'
 
     describe 'extract archive to install_dir' do
@@ -105,7 +105,7 @@ describe 'foremandns' do
     }}
 
     describe 'should not contain any configuration when cfg param is empty' do
-      it { should contain_file('/etc/foremandns/foremandns.yaml').with_content("# This file is managed by Puppet, any changes will be overwritten\n\n") }
+      it { should contain_file('/usr/share/foremandns/foremandns.yaml').with_content("# This file is managed by Puppet, any changes will be overwritten\n\n") }
     end
   end
 end
