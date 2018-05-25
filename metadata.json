@@ -7,6 +7,30 @@
   "source": "https://github.com/Zomato/zomato-foremandns.git",
   "project_page": "https://github.com/Zomato/zomato-foremandns",
   "issues_url": "https://github.com/Zomato/zomato-foremandns/issues",
+  "tags": [
+    "foreman",
+    "foremandns",
+    "foreman-dns",
+    "dns"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "6.0" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "6.0" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "14.04" ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [ "7.0" ]
+    }
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
