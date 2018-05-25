@@ -13,7 +13,7 @@ class foremandns::service {
         service { $::foremandns::service_name:
           ensure     => running,
           provider   => base,
-          binary     => "su - root -c '${service_path} --config=${service_config} &'",
+          binary     => "su - root -c '${service_path} server --config=${service_config} &'",
           hasrestart => false,
           hasstatus  => false,
           status     => "ps -ef | grep ${::foremandns::service_name} | grep -v grep"
