@@ -1,7 +1,7 @@
 {
-  "name": "zomato-foremandns",
+  "name": "vinothzomato-foremandns",
   "version": "1.0.0",
-  "author": "zomato",
+  "author": "vinothzomato",
   "summary": "Foremandns server puppet module",
   "license": "Apache-2.0",
   "source": "https://github.com/Zomato/zomato-foremandns.git",
