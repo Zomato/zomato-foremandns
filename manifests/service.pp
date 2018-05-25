@@ -14,7 +14,7 @@ class foremandns::service {
           ensure     => running,
           provider   => base,
           binary     => "su - root -c '${service_path} server --config=${service_config} &'",
-          stop       => "ps -ef | grep ${::foremandns::service_name} | grep -v grep | awk '{print $2}' | xargs -r kill -9"
+          stop       => "ps -ef | grep ${::foremandns::service_name} | grep -v grep | awk '{print $2}' | xargs -r kill -9",
           hasrestart => false,
           hasstatus  => false,
           status     => "ps -ef | grep ${::foremandns::service_name} | grep -v grep"
