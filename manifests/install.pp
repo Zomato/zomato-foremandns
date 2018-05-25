@@ -20,7 +20,7 @@ class foremandns::install {
       archive { '/tmp/foremandns.tar.gz':
         ensure          => present,
         extract         => true,
-        extract_command => 'tar xfz %s --strip-components=1',
+        extract_command => 'tar xfz %s',
         extract_path    => $::foremandns::install_dir,
         source          => $real_archive_source,
         user            => 'root',
